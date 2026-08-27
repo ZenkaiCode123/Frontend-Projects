@@ -4,82 +4,178 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+    <title>Sudarshan Bhadule - Portfolio</title>
 </head>
 
 <body>
 
-    <!-- Step B1: Header & Navigation -->
+    <!-- Part A & D: Header, Tagline, Profile Photo, and Navigation -->
     <header>
-        <h1>Portfolio</h1>
+        <h1>Sudarshan Bhadule</h1>
+        <p>Full Stack Developer &amp; Web Technologies Enthusiast</p>
+        <img src="images/profile.jpeg" alt="Profile photo of Sudarshan Bhadule" width="150" loading="lazy">
         <nav>
             <ul>
-                <li><a href="#bio">Biography</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
                 <li><a href="#projects">Projects</a></li>
+                <li><a href="#achievements">Achievements</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
 
+    <!-- Part B: Main Content Container -->
     <main>
-        <!-- Step B2: Biography Section -->
-        <section id="bio">
-            <h2>About Me</h2>
-            <p>Welcome to my portfolio. I am a Sudarshan Bhadule passionate about building web applications and
-                exploring new
-                technologies.</p>
-            <img src="https://via.placeholder.com/150" alt="Profile Picture">
-            <h3>Core Skills</h3>
+        <!-- About Section (Parts B & E) -->
+        <section id="about">
+            <h2>About</h2>
+            <p>Welcome to my portfolio. I am <strong>Sudarshan Bhadule</strong>, passionate about building web
+                applications and exploring new technologies. I specialize in <abbr
+                    title="HyperText Markup Language">HTML5</abbr>, <abbr title="Cascading Style Sheets">CSS3</abbr>,
+                and JavaScript, with a strong commitment to writing clean, accessible code.</p>
+            <p>I believe that <em>simplicity</em> is the ultimate sophistication in software design.</p>
+            <blockquote cite="https://example.com/quotes">
+                Design is not just what it looks like and feels like. Design is how it works.
+            </blockquote>
+            <p><a href="resume.pdf" download>Download Resume</a></p>
+        </section>
+
+        <!-- Skills Section (Parts B & F) -->
+        <section id="skills">
+            <h2>Skills</h2>
             <ul>
-                <li>HTML5 & CSS3</li>
-                <li>JavaScript</li>
-                <li>Git & GitHub</li>
+                <li>Frontend
+                    <ul>
+                        <li><abbr title="HyperText Markup Language">HTML</abbr>5 &amp; <abbr
+                                title="Cascading Style Sheets">CSS</abbr>3</li>
+                        <li>JavaScript (ES6+)</li>
+                        <li><del>jQuery</del> <ins>React.js</ins></li>
+                    </ul>
+                </li>
+                <li>Backend
+                    <ul>
+                        <li>Node.js</li>
+                        <li>Python</li>
+                    </ul>
+                </li>
+                <li>Tools
+                    <ul>
+                        <li>Git &amp; GitHub</li>
+                        <li>Neovim</li>
+                    </ul>
+                </li>
             </ul>
         </section>
 
-        <!-- Step B3: Projects Section -->
+        <!-- Part G: Skills Data Table -->
+        <section id="skills-table-section">
+            <h2>Skills Matrix</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th scope="col">Skill Name</th>
+                        <th scope="col">Category</th>
+                        <th scope="col">Proficiency Level</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>HTML5 &amp; CSS3</td>
+                        <td rowspan="3">Frontend</td>
+                        <td>Advanced</td>
+                    </tr>
+                    <tr>
+                        <td>JavaScript</td>
+                        <td>Advanced</td>
+                    </tr>
+                    <tr>
+                        <td>React.js</td>
+                        <td>Intermediate</td>
+                    </tr>
+                    <tr>
+                        <td>Node.js</td>
+                        <td rowspan="2">Backend</td>
+                        <td>Intermediate</td>
+                    </tr>
+                    <tr>
+                        <td>Python</td>
+                        <td>Beginner</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Projects Section (Parts B, C, & H) -->
         <section id="projects">
             <h2>Projects</h2>
 
             <article>
                 <h3>Project One</h3>
-                <p>A web application built using modern web standards.</p>
-                <a href="https://github.com/ZenkaiCode123" target="_blank">View on GitHub</a>
+                <p>A web application built using modern web standards and semantic HTML.</p>
+                <p><a href="https://github.com/ZenkaiCode123/project-one" target="_blank" rel="noopener">View on
+                        GitHub</a></p>
             </article>
 
             <article>
                 <h3>Project Two</h3>
-                <p>Neovim setup</p>
-                <a href="https://github.com" target="_blank">View on GitHub</a>
+                <p>Neovim configuration and custom development environment setup.</p>
+                <p><a href="https://github.com/ZenkaiCode123/neovim-dotfiles" target="_blank" rel="noopener">View on
+                        GitHub</a></p>
             </article>
         </section>
 
-        <!-- Step B4: Contact Section -->
+        <!-- Achievements Section (Part B) -->
+        <section id="achievements">
+            <h2>Achievements</h2>
+            <ul>
+                <li>Completed Full Stack Development course certification.</li>
+                <li>Contributed to open source developer tools and documentation.</li>
+            </ul>
+        </section>
+
+        <!-- Part I: Contact Form Section -->
         <section id="contact">
             <h2>Contact Me</h2>
-            <form action="#" method="post">
-                <div>
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-                <div>
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div>
-                    <label for="message">Message:</label>
-                    <textarea id="message" name="message" rows="4" required></textarea>
-                </div>
-                <div>
-                    <button type="submit">Send Message</button>
-                </div>
+            <form action="/submit" method="post">
+                <fieldset>
+                    <legend>Get In Touch</legend>
+                    <div>
+                        <label for="fullname">Name:</label>
+                        <input type="text" id="fullname" name="fullname" required>
+                    </div>
+                    <div>
+                        <label for="visitor_email">Email:</label>
+                        <input type="email" id="visitor_email" name="visitor_email" required>
+                    </div>
+                    <div>
+                        <label for="topic">Reason for Contacting:</label>
+                        <select id="topic" name="topic">
+                            <option value="job" selected>Job Opportunity</option>
+                            <option value="freelance">Freelance Project</option>
+                            <option value="enquiry">General Enquiry</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" rows="4" cols="40" required></textarea>
+                    </div>
+                    <div>
+                        <button type="submit">Send Message</button>
+                    </div>
+                </fieldset>
             </form>
         </section>
     </main>
 
-    <!-- Step B5: Footer -->
+    <!-- Part J: Footer -->
     <footer>
-        <p>&copy; 2026. All rights reserved.</p>
+        <address>
+            Email: <a href="mailto:contact@example.com">contact@example.com</a> |
+            GitHub: <a href="https://github.com/ZenkaiCode123" target="_blank" rel="noopener">GitHub Profile</a> |
+            LinkedIn: <a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn Profile</a>
+        </address>
+        <p>&copy; 2026 Sudarshan Bhadule. All rights reserved.</p>
     </footer>
 
 </body>
