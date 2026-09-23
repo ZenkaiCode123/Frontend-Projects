@@ -35,7 +35,9 @@ main {
     min-height: 400px;
 }
 
-.div1, .div2, .div3 {
+.div1,
+.div2,
+.div3 {
     width: 100px;
     height: 100px;
     border: 2px solid #black;
